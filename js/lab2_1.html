@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Група ПП-25 _ Антіпова Софія _ Завдання 2.1</title>
+</head>
+<body>
+<script>
+    "use strict";
+    // --- Простий IF ---
+    document.write("<h3>1. Перевірка шоколаду</h3>");
+    // prompt повертає рядок, тому перетворюємо в число через parseInt
+    let cocoaInput = prompt("Введіть % какао (0-100):", "");
+    let cocoaPercent = parseInt(cocoaInput);
+    document.write("Ваш ввід: " + cocoaPercent + "%<br>");
+
+    if (cocoaPercent > 70) {
+        document.write("<b>Результат:</b> Це гіркий шоколад.<br>");
+    }
+    if (cocoaPercent <= 70) {
+        document.write("<b>Результат:</b> Це не гіркий шоколад.<br>");
+    }
+    document.write("<hr>"); // Лінія розділювач
+
+    // IF ... ELSE
+    document.write("<h3>2. Упаковка замовлення</h3>");
+
+    let countInput = prompt("Скільки плиток берете?", "");
+    let count = parseInt(countInput);
+    document.write("Кількість плиток: " + count + "<br>");
+
+    // Умова: якщо більш як 3 — коробка, інакше — пакет
+    if (count > 3) {
+        document.write("<b>Результат:</b> Велика коробка (опт).<br>");
+    } else {
+        document.write("<b>Результат:</b> Паперовий пакет (роздріб).<br>");
+    }
+    document.write("<hr>");
+
+    // ELSE IF
+    document.write("<h3>3. Вибір начинки</h3>");
+
+    let taste = prompt("Начинка (горіхи / карамель / полуниця):", "");
+    // Приймає як Горіх, так і горіх
+    if (taste) taste = taste.toLowerCase();
+
+    document.write("Ви обрали: " + taste + "<br>");
+
+    if (taste === "горіхи") {
+        document.write("<b>Дія:</b> Додаємо лісовий горіх.");
+    }
+    else if (taste === "карамель") {
+        document.write("<b>Дія:</b> Додаємо солону карамель.");
+    }
+    else if (taste === "полуниця") {
+        document.write("<b>Дія:</b> Додаємо шматочки полуниці.");
+    }
+    else {
+        document.write("<b>Дія:</b> Такої начинки немає, зробимо без неї.");
+    }
+
+</script>
+</body>
+</html>

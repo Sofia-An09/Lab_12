@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Група ПП-25 _ Антіпова Софія _ Завдання 2.2</title>
+</head>
+<body>
+<script>
+    "use strict";
+    document.write("<p style='text-align:center'><strong>Майстерня ChocoFox: Пошук найдорожчого десерту</strong></p>");
+    // Вводимо ціни для трьох видів цукерок
+    // Використовуємо +prompt або Number(), щоб перетворити текст на число
+    let candy = Number(prompt("Введіть ціну Трюфеля (грн):", ""));
+    let chocolate = Number(prompt("Введіть ціну Праліне (грн):", ""));
+    let chocoBar = Number(prompt("Введіть ціну Желе в шоколаді (грн):", ""));
+
+    document.write("Ціни: Цукерка=" + candy + ", Шоколад=" + chocolate + ", Шоколадний батончик=" + chocoBar + "<hr>");
+
+    // Спосіб 1: Використання оператора IF
+    if (candy > chocolate && candy > chocoBar)
+        document.write("Найдорожчий виріб - Цукерка: " + candy + " грн");
+    else
+    if (chocolate > chocoBar)
+        document.write("Найдорожчий виріб - Шоколад: " + chocolate + " грн");
+    else
+        document.write("Найдорожчий виріб - Батончик: " + chocoBar + " грн");
+
+    // Спосіб 2: Використання тернарної операції
+    // Спочатку порівнюємо перші два, потім результат з третім
+    let maxPrice = candy > chocolate ? candy : chocolate;
+    maxPrice = maxPrice > chocoBar ? maxPrice : chocoBar;
+
+    document.write("<p>Значення найвищої ціни (через тернарний оператор) - ", maxPrice, " грн</p>");
+</script>
+</body>
+</html>
